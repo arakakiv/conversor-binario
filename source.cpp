@@ -41,7 +41,7 @@ int main() {
 				}
 
 				std::cout << "\n::: The value converted is " << valueConverted << std::endl;
-				std::cout << std::endl;	
+				std::cout << std::endl;
 			}
 			else {
 				std::cout << "\n::: PROBLEM: value and option don't match.\n\n";
@@ -59,9 +59,14 @@ bool isBinary(std::string x) {
 	int posOfZeroB = x.find("0b");
 	int posOfFirstOne = x.find('1');
 
-	for(int i = 0; i < x.length(); ++i) {
-		if (x[i] != 'b' && x[i] != '0' && x[i] != '1') {
-			return false;
+	for(int i = 0, b = 0; i < x.length(); ++i) {
+		if (x[i] != '0' && x[i] != '1') {
+			if (x[i] == 'b' && b == 0) {
+                b++;
+			}
+			else {
+                return false;
+			}
 		}
 	}
 
@@ -101,7 +106,7 @@ std::string toBinary(std::string x) {
 
 std::string toDecimal(std::string x) {
 	int rValue = 0;
-	
+
 	for(int i = x.length(); i > 0; --i) {
 		if (x[x.length() - i] == '1') {
 			rValue +=  pow(2, i - 1);
