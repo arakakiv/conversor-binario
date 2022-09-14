@@ -1,3 +1,3 @@
-# Conversor Binário-Decimal
+# Conversor Binário
 
-Uma simples aplicação em terminal que converte números binários em decimais e números decimais em binários.
+Uma simples aplicação em terminal que converte números binários em inteiros e números inteiros em binários.
