@@ -1,3 +1,3 @@
 # Conversor Binário
 
-Uma simples aplicação em terminal que converte números binários em inteiros e números inteiros em binários.
+Converting binary to integers and integers to binary. Just that.
